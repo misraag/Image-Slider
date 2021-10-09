@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+*{
+  font-family: 'Noto Sans Mono', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+}
+.slider{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.slide{
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+ 
+
+}
+.slide.current{
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide .content{
+  position: absolute;
+  left: -600px;
+  opacity: 0;
+  bottom: 70px;
+  width: 500px;
+  background: rgba(255,255,255,0.8);
+  padding: 35px;
+  color: #333;
+  
+}
+.slide .content h1{
+  margin-bottom: 10px;
+}
+.slide.current .content{
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+  
+}
+
+
+/* Buttons Class */
+
+.buttons button{
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  padding: 10px;
+
+}
+.buttons button:hover{
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.buttons button#next{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+ 
+}
+
+.buttons button#prev{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+ 
+}
+
+@media(max-width: 500px){
+  .slide .content{
+    left: 0;
+    bottom: -300px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .slide.current .content{
+    transform: translateY(-300px);
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Backgorund Images */
+ 
+.slide:first-child {
+    background: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(2) {
+    background: url('https://source.unsplash.com/BeOW_PJjA0w/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url('https://source.unsplash.com/ULmaQh9Gvbg/1600x900') no-repeat
+      center top/cover;
+  } 
+  .slide:nth-child(6)  {
+    background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat
+      center center/cover;
+  }
